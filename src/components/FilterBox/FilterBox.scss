@@ -1,0 +1,79 @@
+@import './../../palette.scss';
+.FilterBox{
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .FilterBox-param{
+        margin-bottom: 20px;
+        width: fit-content;
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+
+        .FilterBox-param-title{
+            font-size: 14pt;
+            font-weight: 600;
+            position: absolute;
+            width: 100%;
+        }
+        .FilterBox-param-subtitle{
+            font-size: 12pt;
+            font-weight: 600;
+            margin-left: 15px;
+        }
+        .FilterBox-options{
+            margin-left: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .FilterBox-subParam{
+            margin-top: 16pt;
+            width: fit-content;
+        }
+    }
+
+    .FilterBox-active{
+        .FilterBox-options{
+            .FilterBox-options-opt{
+                width: fit-content;
+                margin: 7px 5px;
+                position: relative;
+                label{
+                    padding: 5px 10px;
+                    border-radius: 20px;
+                    transition: all 0.3s ease;
+
+                    input{
+                        display: none;
+                    }
+
+                    &::before{
+                        position: absolute;
+                        display: inline-block;
+                        top: 0;
+                        left: 0;
+                        content: ".";
+                        color: transparent;
+                        z-index: -1;
+                        border-radius: 50px;
+                        background-color: $highlight;
+                        width: 0;
+                        transition: all 0.3s;
+                    }
+
+                    &:has(input:checked){
+                        &::before{
+                            width: 100%;                    
+                        }
+                        &{
+                            color: $foreground-strong-dark;
+                        }
+                    }
+                }            
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,52 @@
+@import '../../palette.scss';
+.Dashboard{
+    width: 90%;
+    margin: 100px auto;
+
+    .Dashboard-topbar{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .Dashboard-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+        .Dashboard-content-col{
+            width: 100%;
+        }
+    }
+    .Dashboard-pages{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .setItems{
+            select{
+                margin: 0 10px;
+            }
+        }
+        .navButtons{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            span{
+                text-align: center;
+            }
+
+            .navButton{
+                background-color: transparent;
+                outline: none;
+                border: none;
+                padding: 10px;
+                &:hover{
+                    cursor: pointer;
+                    color: $highlight;
+                }
+            }
+        }
+    }   
+}

@@ -1,0 +1,47 @@
+@import '../../palette.scss';
+
+.Searchbar{
+    .Searchbar-content{
+        width: fit-content;
+        padding: 5px 10px;
+        background-color: $background-input;
+        border: 2px solid  $foreground;
+        border-radius: 20px;
+    
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        gap: 3px;
+
+        transition: border-color 0.3s ease;
+        &:hover, &:has(.Searchbar-input:focus), &:has(.Searchbar-input:hover), &:has(.Searchbar-input:valid){
+            border-color: $highlight;
+            i{
+                color: $highlight;
+            }
+
+            .Searchbar-input{
+                width: 150px;
+                border-color: $highlight;
+            }
+        }
+    
+        .Searchbar-input{
+            border: none;
+            outline: none;
+            border-right: 2px solid $foreground;
+            color: $foreground;
+            font-size: 12pt;
+            width: 7ch;
+            padding-left: 3px;
+            transition: width 0.3s ease;
+
+            
+        }
+
+        i{
+            transition: color 0.3s ease;
+            color: $foreground;
+        }
+    }
+}

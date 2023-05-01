@@ -1,0 +1,28 @@
+@import '../../palette.scss';
+
+.StoreTable{
+    width: 100%;
+    margin: 20px 0;
+
+    .StoreTable-table{
+        width: 100%;
+        border-collapse: collapse;
+        th{
+            background-color: $background-secondary;
+            color: $foreground-strong-dark;
+            padding: 10px 0;
+            margin: 0;
+            border-color: $background-dark;
+        }
+        tr{
+            td{
+                text-align: center;
+            }
+        }
+
+        & tr:nth-child(odd){
+            background-color: $highlight-semitransparent;
+        }
+    }
+
+}
