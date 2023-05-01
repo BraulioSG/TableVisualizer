@@ -2,7 +2,7 @@
 
 ## **About**
 
-Made in react, this project visualize data received from an API. To simulate the API, the project has
+Made in react using Typescript and Sass, this project visualize data received from an API. To simulate the API, the project has
 features as, queries, filters, and sorting. Also the table in segmented in pages and the user can navigate
 along the pages and define the number of items shown in each page.
 <br/>
